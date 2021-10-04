@@ -1,0 +1,14 @@
+Nro.Factura: B-00000000-03 		 Fecha: 30/9/2021 17:20:42
+
+Razon Social: MultiPet 		 CUIT: 30-123456585-7
+Av. Hipolito Yrigoyen 15000,Lomas de Zamora
+Cliente: Juan Carlos Fantasma
+Detalle
+
+
+Codigo		Cantidad		Descripcion		Precio p/u 		 Subtotal
+AlPro 5Kg C	2			5Kg Cachorros		$3200,5 		  $6401
+
+JuBichPelot	1			Pelota Goma		$500 		  $500
+
+Total 												 $6901

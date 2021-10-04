@@ -1,0 +1,12 @@
+Nro.Factura: B-00000000-03 		 Fecha: 2/10/2021 23:49:09
+
+Razon Social: MultiPet 		 CUIT: 30-123456585-7
+Av. Hipolito Yrigoyen 15000,Lomas de Zamora
+Cliente: Juan Carlos Fantasma
+Detalle
+
+
+Codigo		Cantidad		Descripcion		Precio p/u 		 Subtotal
+JuBichPelot	1			Pelota Goma		$500 		  $500
+
+Total 												 $500

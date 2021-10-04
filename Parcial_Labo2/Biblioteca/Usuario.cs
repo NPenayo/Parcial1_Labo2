@@ -31,7 +31,7 @@ namespace Biblioteca
             {
                 return this.dni;
             }
-            internal set
+            set
             {
                 if (Validacion.Dni(value))
                 {
@@ -45,7 +45,7 @@ namespace Biblioteca
             {
                 return FormatearString(nombre);
             }
-            internal set
+            set
             {
                 this.nombre = value.ToLower();
             }
@@ -56,7 +56,7 @@ namespace Biblioteca
             {
                 return FormatearString(apellido);
             }
-            internal set
+            set
             {
                 this.apellido = value.ToLower();
             }
@@ -67,7 +67,7 @@ namespace Biblioteca
             {
                 return this.fechaNacimiento;
             }
-            internal set
+            set
             {
                 if (Validacion.Fecha(value))
                 {
@@ -82,7 +82,7 @@ namespace Biblioteca
             {
                 return FormatearString(this.direccion);
             }
-            internal set
+            set
             {
                 this.direccion = value.ToLower();
             }
@@ -93,7 +93,7 @@ namespace Biblioteca
             {
                 return FormatearString(this.localidad);
             }
-            internal set
+            set
             {
                 this.localidad = value.ToLower();
             }
@@ -127,7 +127,6 @@ namespace Biblioteca
 
             return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(entrada);
         }
-
 
     }
 }

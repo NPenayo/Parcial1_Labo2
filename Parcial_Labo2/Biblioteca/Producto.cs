@@ -44,18 +44,18 @@ namespace Biblioteca
         }
 
         public string IdProducto { get { return this.idProducto; } private set { this.idProducto = value; } }
-        public ETipoProducto Tipo { get { return this.tipo; } private set { this.tipo = value; } }
-        public double Precio { get { return this.precio; } private set { this.precio = value; } }
+        public ETipoProducto Tipo { get { return this.tipo; }  set { this.tipo = value; } }
+        public double Precio { get { return this.precio; }  set { this.precio = value; } }
         public string Marca { get { return this.marca; } set { this.marca = value; } }
         public string Descripcion { get { return this.descripcion; } set { this.descripcion = value; } }
-        public int Stock { get { return this.stock; } private set { this.stock = value; } }
+        public int Stock { get { return this.stock; } set { this.stock = value; } }
         /// <summary>
         /// Crea ID unico por producto
         /// </summary>
         /// <returns>ID de producto</returns>
         private string CrearIdDeProducto()
         {
-            return $"{Tipo.ToString().Substring(0, 2)}{Marca.Substring(0, 4)}{Descripcion.Substring(0, 5)}";
+            return $"{Tipo.ToString().Substring(0, 2)}{Marca.Substring(0, 4)}{Descripcion.Substring(0, 5)}".Trim();
         }
         /// <summary>
         /// Agregar stock a un producto
@@ -80,7 +80,7 @@ namespace Biblioteca
         /// <returns>true || false</returns>
         public static bool operator -(Producto producto, int stock)
         {
-            if (Validacion.NumeroEntero(stock) && producto.Stock - stock >0)
+            if (Validacion.NumeroEntero(stock) && producto.Stock - stock >=0)
             {
                 producto.Stock -= stock;
                 return true;

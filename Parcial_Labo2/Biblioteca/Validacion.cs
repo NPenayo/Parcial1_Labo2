@@ -19,7 +19,7 @@ namespace Biblioteca
         }
         public static bool Dni(string dni)
         {
-            string patron = @"^([0-9]{2}|[0-9])([0-9]){6}";
+            string patron = @"^(\d){8}$";
             Regex reg = new Regex(patron);
             if (reg.IsMatch(dni))
             {
@@ -48,15 +48,20 @@ namespace Biblioteca
             return false;
         }
 
-        public static bool Credenciales(List<Empleado> empleados, string nombreDeUsuario, string password)
+        public static bool Credenciales(List<Usuario> empleados, string nombreDeUsuario, string password)
         {
 
-            foreach (Empleado item in empleados)
+            foreach (Usuario item in empleados)
             {
-                if (String.Equals(item.NombreUsuario,nombreDeUsuario,StringComparison.OrdinalIgnoreCase) && item.Password == password)
+                if (item is not Cliente)
                 {
-                    return true;
+
+                    if (String.Equals(((Empleado)item).NombreUsuario, nombreDeUsuario, StringComparison.OrdinalIgnoreCase) && ((Empleado)item).Password == password)
+                    {
+                        return true;
+                    }
                 }
+
             }
             return false;
         }

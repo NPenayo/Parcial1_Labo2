@@ -20,3 +20,16 @@ C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\Ad
 C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.pdb
 C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.genruntimeconfig.cache
 C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.Properties.Resources.resources
+C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.MenuBase.resources
+C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.MenuEmpleado.resources
+C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.MenuAdmin.resources
+C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.DialogTimeOut.resources
+C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.FormInicio.resources
+C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.ModalCantidad.resources
+C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.FormProductos.resources
+C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.ModalProducto.resources
+C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.FormClientes.resources
+C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.ModalCliente.resources
+C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.FormEmpleados.resources
+C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.FormFacturacion.resources
+C:\Users\Penayo\Documents\Facultad\primer_parcia_penayo_nicolas\Parcial_Labo2\AdministracionTienda\obj\Debug\net5.0-windows\AdministracionTienda.ModalEmpleado.resources

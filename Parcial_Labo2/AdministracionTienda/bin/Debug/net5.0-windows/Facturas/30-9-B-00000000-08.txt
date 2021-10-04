@@ -1,0 +1,14 @@
+Nro.Factura: B-00000000-08 		 Fecha: 30/9/2021 16:37:30
+
+Razon Social: MultiPet 		 CUIT: 30-123456585-7
+Av. Hipolito Yrigoyen 15000,Lomas de Zamora
+Cliente: Martina Perez
+Detalle
+
+
+Codigo		Cantidad		Descripcion		Precio p/u 		 Subtotal
+CaComf50Cm 	1			50Cm Diametro		$1500 		  $1500
+
+JuBichPelot	3			Pelota Goma		$500 		  $1500
+
+Total 												 $3000

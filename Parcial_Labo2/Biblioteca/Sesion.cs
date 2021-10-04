@@ -11,11 +11,13 @@ namespace Biblioteca
     {
         private string idSesion;
         private DateTime ultimaActividad;
-     
+        private Usuario usuario;
+
         public Sesion(Usuario usuario)
         {
             IdSesion = (usuario.DNI, usuario.Apellido).GetHashCode().ToString();
             UltimaActividad = DateTime.Now;
+            this.usuario = usuario;
 
         }
         public string IdSesion
@@ -34,12 +36,19 @@ namespace Biblioteca
                 this.ultimaActividad = value;
             }
         }
-       
-       
+        public Usuario Usuario
+        {
+            get
+            {
+                return this.usuario;
+            }
+        }
+
+
         public bool SesionActiva()
         {
             int diferencia = DateTime.Now.Minute - ultimaActividad.Minute;
-            if (this.IdSesion is not null && diferencia <= 3 )
+            if (this.IdSesion is not null && diferencia <= 3)
             {
                 return true;
             }

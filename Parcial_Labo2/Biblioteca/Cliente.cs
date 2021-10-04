@@ -26,7 +26,7 @@ namespace Biblioteca
 
         public int IdCliente { get { return this.idCliente; } private set { this.idCliente = value; } }
 
-        public double Saldo { get { return this.saldo; } private set { this.saldo = value; } }
+        public double Saldo { get { return this.saldo; }  set { this.saldo = value; } }
 
         /// <summary>
         /// Restarle el precio de un producto al saldo de un cliente
@@ -36,9 +36,9 @@ namespace Biblioteca
         /// <returns>True si se pudo descontar del saldo</returns>
         public static bool operator -(Cliente cliente, double precio)
         {
-            if(cliente.Saldo - precio >= 0)
+            if (cliente.Saldo - precio >= 0)
             {
-                cliente.Saldo -= cliente.Saldo - precio;
+                cliente.saldo -= precio;
                 return true;
             }
             return false;
@@ -52,7 +52,7 @@ namespace Biblioteca
         public static bool operator +(Cliente cliente, double precio)
         {
 
-            cliente.Saldo += cliente.Saldo + precio;
+            cliente.Saldo += precio;
             return true;
         }
 

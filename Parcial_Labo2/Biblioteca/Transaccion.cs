@@ -19,11 +19,15 @@ namespace Biblioteca
         static Transaccion()
         {
             ultimoId = 0;
+
+
         }
         private Transaccion()
         {
             this.total = 0;
             this.productos = new Dictionary<Producto, int>();
+
+
         }
 
         public Transaccion(Cliente cliente, Empleado empleado) : this()
@@ -41,7 +45,7 @@ namespace Biblioteca
         public Empleado Empleado { get { return this.empleado; } private set { this.empleado = value; } }
         public double Total { get { return this.total; } private set { this.total = value; } }
         public DateTime Fecha { get { return this.fecha; } private set { this.fecha = value; } }
-        public Dictionary<Producto, int> Productos { get { return this.productos; } }
+        public Dictionary<Producto, int> Productos { get { return productos; } }
 
         /// <summary>
         /// Obtener listado de productos de una transaccion
@@ -59,11 +63,18 @@ namespace Biblioteca
         }
         public bool AgregarProducto(Producto producto, int cantidad)
         {
-            if (producto.Stock - cantidad >= 0 && this.cliente.Saldo - CalcularPacial(producto, cantidad) >= 0)
+            if (producto - cantidad && this.cliente - CalcularPacial(producto, cantidad))
             {
-                this.productos.Add(producto, cantidad);
+                foreach (KeyValuePair<Producto, int> item in this.Productos)
+                {
+                    if (item.Key == producto) {
+                        cantidad += item.Value;
+                        this.Productos.Remove(item.Key);
+                    }
+                }
+                this.Productos.Add(producto, cantidad);
                 this.CalcularTotal();
-                return producto - cantidad && this.Cliente - CalcularPacial(producto, cantidad);
+                return true;
             }
 
             return false;
@@ -71,10 +82,10 @@ namespace Biblioteca
         public bool QuitarProducto(Producto producto)
         {
 
-            if (this.productos.ContainsKey(producto))
+            if (this.Productos.ContainsKey(producto))
             {
-                int cantidad = this.productos[producto];
-                if (this.productos.Remove(producto, out int registros))
+                int cantidad = Productos[producto];
+                if (this.Productos.Remove(producto))
                 {
                     this.CalcularTotal();
                     return producto + cantidad && this.Cliente + CalcularPacial(producto, cantidad);
@@ -86,13 +97,12 @@ namespace Biblioteca
 
         public bool EditarCantidad(Producto producto, int cantidad)
         {
-            if (this.productos.ContainsKey(producto))
+            if (productos.ContainsKey(producto))
             {
-                if (producto.Stock - cantidad >= 0 && this.cliente.Saldo - CalcularPacial(producto, cantidad) >= 0)
+                if (producto + cantidad && cliente + CalcularPacial(producto, cantidad))
                 {
-                    this.productos[producto] = cantidad;
                     this.CalcularTotal();
-                    return producto - cantidad && this.Cliente - CalcularPacial(producto, cantidad);
+                    return true;
 
                 }
                 return false;
@@ -103,12 +113,12 @@ namespace Biblioteca
 
         private void CalcularTotal()
         {
-            this.Total = 0;
-            if (this.productos is not null)
+            this.total = 0;
+            if (this.Productos is not null)
             {
-                foreach (KeyValuePair<Producto, int> item in this.productos)
+                foreach (KeyValuePair<Producto, int> item in this.Productos)
                 {
-                    this.Total += this.CalcularPacial(item.Key, item.Value);
+                    this.total += this.CalcularPacial(item.Key, item.Value);
                 }
             }
 

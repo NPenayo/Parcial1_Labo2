@@ -44,7 +44,7 @@ namespace Biblioteca
             {
                 return this.password;
             }
-            private set
+            set
             {
                 if (Validacion.FormatoPassword(value))
                 {
@@ -60,7 +60,7 @@ namespace Biblioteca
         {
             return $"{this.Apellido.Substring(0, 1)}{this.Nombre.Substring(0, 1)}{this.DNI.Substring(4, 4)}";
         }
-        protected static List<Cliente> ObtenerClientes(List<Usuario> usuarios)
+        public static List<Cliente> ObtenerClientes(List<Usuario> usuarios)
         {
             List<Cliente> listaClientes = new List<Cliente>();
             for (int i = 0; i < usuarios.Count; i++)
