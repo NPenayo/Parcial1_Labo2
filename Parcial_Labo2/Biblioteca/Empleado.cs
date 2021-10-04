@@ -56,10 +56,19 @@ namespace Biblioteca
             }
         }
 
+        /// <summary>
+        /// Arma el nombre de usuario del empleado
+        /// </summary>
+        /// <returns>string</returns>
         private string ArmarNombreUsuario()
         {
             return $"{this.Apellido.Substring(0, 1)}{this.Nombre.Substring(0, 1)}{this.DNI.Substring(4, 4)}";
         }
+        /// <summary>
+        /// Obtener clientes de una lista de usuarios
+        /// </summary>
+        /// <param name="usuarios"></param>
+        /// <returns></returns>
         public static List<Cliente> ObtenerClientes(List<Usuario> usuarios)
         {
             List<Cliente> listaClientes = new List<Cliente>();
@@ -72,7 +81,12 @@ namespace Biblioteca
             }
             return listaClientes;
         }
-
+        /// <summary>
+        /// Agregar un cliente a la lista de usuarios
+        /// </summary>
+        /// <param name="clientes"></param>
+        /// <param name="cliente"></param>
+        /// <returns></returns>
         public virtual bool Agregar(List<object> clientes, object cliente)
         {
             if (cliente.GetType().Name == "Cliente" && clientes.GetType().Name == "Cliente")
@@ -85,6 +99,12 @@ namespace Biblioteca
             }
             return false;
         }
+        /// <summary>
+        /// Editar un usuario
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <param name="campos"></param>
+        /// <returns>false</returns>
         public virtual bool Editar(Usuario usuario, Dictionary<string, string> campos)
         {
             return false;

@@ -43,6 +43,9 @@ namespace AdministracionTienda
             criterioBusqueda = "Privilegios";
             cmbPrivilegios.BringToFront();
         }
+        /// <summary>
+        /// Muestra la lista de empleados
+        /// </summary>
         private void ListarEmpleados()
         {
             listEmpleados.Items.Clear();
@@ -60,6 +63,10 @@ namespace AdministracionTienda
                 }
             }
         }
+        /// <summary>
+        /// Muestra los de un empleado
+        /// </summary>
+        /// <param name="buscar"></param>
         private void ListarEmpleados(Empleado buscar)
         {
             if (Program.usuarios is not null)
@@ -76,6 +83,9 @@ namespace AdministracionTienda
                 }
             }
         }
+        /// <summary>
+        /// Habilita el textbox de busqueda
+        /// </summary>
         private void HabilitarBusqueda()
         {
             txtBusqueda.Enabled = true;
@@ -100,6 +110,10 @@ namespace AdministracionTienda
                 ListarEmpleados();
             }
         }
+        /// <summary>
+        /// Filtra los elementos de una lista segun el parametro
+        /// </summary>
+        /// <param name="parametro"></param>
         private void FiltrarLista(string parametro)
         {
             if (parametro is not null)
@@ -187,6 +201,11 @@ namespace AdministracionTienda
                 break;
             }
         }
+        /// <summary>
+        /// Obtiene el empleado segun su nombre de usuario
+        /// </summary>
+        /// <param name="nombreUsuario"></param>
+        /// <returns>Empleado</returns>
         private Empleado ObtenerEmpleado(string nombreUsuario)
         {
             foreach (Usuario usuario in Program.usuarios)

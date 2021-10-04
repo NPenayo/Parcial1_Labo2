@@ -45,12 +45,19 @@ namespace AdministracionTienda
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
+        /// <summary>
+        /// Cambia el color de la fuente al hacer hover
+        /// </summary>
+        /// <param name="btn"></param>
         static void ColorHover(Button btn)
         {
             btn.ForeColor = Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
 
         }
+        /// <summary>
+        /// Cambia el color de la fuente al hacer leave
+        /// </summary>
+        /// <param name="btn"></param>
         static void ColorLeave(Button btn)
         {
             btn.ForeColor = SystemColors.ButtonHighlight;
@@ -194,7 +201,7 @@ namespace AdministracionTienda
             ColorLeave(btnFacturacion);
         }
         #endregion
-
+        ///
         private void tiempoSesion_Tick(object sender, EventArgs e)
         {
 
@@ -231,6 +238,10 @@ namespace AdministracionTienda
         {
             this.tiempoSesion.Enabled = true;
         }
+        /// <summary>
+        /// Abre el formulario correspondiente a la opcion del menu
+        /// </summary>
+        /// <param name="abrirForm"></param>
         private void AbrirFormEnCuerpo(Form abrirForm)
         {
             if (formActivo != null && formActivo != abrirForm)
@@ -245,6 +256,10 @@ namespace AdministracionTienda
             abrirForm.BringToFront();
             abrirForm.Show();
         }
+        /// <summary>
+        /// Verifica que haya actividad en el formulario
+        /// </summary>
+        /// <param name="controles"></param>
         private void VerificarActividad(Control.ControlCollection controles)
         {
             foreach (Control control in controles)
@@ -281,7 +296,9 @@ namespace AdministracionTienda
         {
             RenovarSesion();
         }
-
+        /// <summary>
+        /// Renueva el tiempo de la sesion
+        /// </summary>
         private void RenovarSesion()
         {
             timeOut = 3;

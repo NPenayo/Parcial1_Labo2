@@ -13,6 +13,12 @@ namespace Biblioteca
         { 
 
         }
+        /// <summary>
+        /// Agregar un elemento a una lista
+        /// </summary>
+        /// <param name="lista"></param>
+        /// <param name="objeto"></param>
+        /// <returns>true | false</returns>
         public override bool Agregar(List<object> lista, object objeto)
         {
             if (!lista.Contains(objeto))
@@ -22,6 +28,12 @@ namespace Biblioteca
             }
             return false;
         }
+        /// <summary>
+        /// Eliminar un elemento de una lista
+        /// </summary>
+        /// <param name="lista"></param>
+        /// <param name="objeto"></param>
+        /// <returns>true | false</returns>
         private bool Eliminar(List<object> lista, object objeto)
         {
             if (lista.Contains(objeto))
@@ -32,7 +44,11 @@ namespace Biblioteca
             return false;
 
         }
-
+        /// <summary>
+        /// Obtener una lista de empleados a partir de una lista de usuarios
+        /// </summary>
+        /// <param name="usuarios"></param>
+        /// <returns>List<Empleado></returns>
         public static List<Empleado> ObtenerEmpleados(List<Usuario> usuarios)
         {
             List<Empleado> listaEmpleados = new List<Empleado>();
@@ -46,7 +62,12 @@ namespace Biblioteca
             }
             return listaEmpleados;
         }
-
+        /// <summary>
+        /// Editar propiedades de un usuario
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <param name="campos"></param>
+        /// <returns>true | false</returns>
         public override bool Editar(Usuario usuario, Dictionary<string, string> campos)
         {
             foreach (KeyValuePair<string, string> item in campos)

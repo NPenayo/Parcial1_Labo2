@@ -368,7 +368,6 @@ namespace AdministracionTienda
             this.Name = "ModalEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModalEmpleado";
-            this.Load += new System.EventHandler(this.ModalEmpleado_Load);
             this.panelNuevaPass.ResumeLayout(false);
             this.panelNuevaPass.PerformLayout();
             this.ResumeLayout(false);

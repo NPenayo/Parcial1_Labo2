@@ -61,6 +61,12 @@ namespace Biblioteca
             }
             return listado;
         }
+        /// <summary>
+        /// Agrega un producto a la transaccion
+        /// </summary>
+        /// <param name="producto"></param>
+        /// <param name="cantidad"></param>
+        /// <returns>true | false</returns>
         public bool AgregarProducto(Producto producto, int cantidad)
         {
             if (producto - cantidad && this.cliente - CalcularPacial(producto, cantidad))
@@ -79,6 +85,12 @@ namespace Biblioteca
 
             return false;
         }
+       
+        /// <summary>
+        /// Quita un producto de la transaccion
+        /// </summary>
+        /// <param name="producto"></param>
+        /// <returns></returns>
         public bool QuitarProducto(Producto producto)
         {
 
@@ -95,6 +107,12 @@ namespace Biblioteca
             return false;
         }
 
+       /// <summary>
+       /// Edita la cantidad de un producto de la transaccion
+       /// </summary>
+       /// <param name="producto"></param>
+       /// <param name="cantidad"></param>
+       /// <returns>true | false</returns>
         public bool EditarCantidad(Producto producto, int cantidad)
         {
             if (productos.ContainsKey(producto))
@@ -111,6 +129,9 @@ namespace Biblioteca
             return false;
         }
 
+        /// <summary>
+        /// Calcula el total de la transaccion
+        /// </summary>
         private void CalcularTotal()
         {
             this.total = 0;
@@ -123,6 +144,12 @@ namespace Biblioteca
             }
 
         }
+        /// <summary>
+        /// Calcula el subtotal de un producto
+        /// </summary>
+        /// <param name="producto"></param>
+        /// <param name="cantidad"></param>
+        /// <returns>double</returns>
         public double CalcularPacial(Producto producto, int cantidad)
         {
             return producto * cantidad;

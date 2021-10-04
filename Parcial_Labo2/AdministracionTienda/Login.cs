@@ -13,21 +13,13 @@ namespace AdministracionTienda
 {
     public partial class Login : Form
     {
-        
+
         public Login()
         {
             InitializeComponent();
 
         }
-
-        public Login(string cerrado) : this()
-        {
-            if(cerrado is not null)
-            {
-                MessageBox.Show("Sesion cerrada por inactividad");
-            }
-        }
-
+        ///
         private void btnLogAdmin_Click(object sender, EventArgs e)
         {
             txtUserName.Text = $"{Program.adminUserName}";
@@ -59,6 +51,12 @@ namespace AdministracionTienda
             }
         }
 
+        /// <summary>
+        /// Obtiene el usuario logueado
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="pass"></param>
+        /// <returns>Empleado</returns>
         static Empleado ObtenerLogueado(string user, string pass)
         {
             foreach (Usuario item in Program.usuarios)
@@ -66,7 +64,7 @@ namespace AdministracionTienda
                 if (item is Empleado)
                 {
                     Empleado empleado = item as Empleado;
-                    if (String.Equals(empleado.NombreUsuario, user, StringComparison.OrdinalIgnoreCase )&& empleado.Password == pass)
+                    if (String.Equals(empleado.NombreUsuario, user, StringComparison.OrdinalIgnoreCase) && empleado.Password == pass)
                     {
                         return empleado;
                     }
@@ -75,6 +73,10 @@ namespace AdministracionTienda
             }
             return null;
         }
+        /// <summary>
+        /// Abre el menu principal
+        /// </summary>
+        /// <param name="usuario"></param>
         private void AbrirMenu(Empleado usuario)
         {
             Program.sesion = new Sesion(usuario);
@@ -93,18 +95,14 @@ namespace AdministracionTienda
 
             }
         }
-
-       
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         private void Login_Load(object sender, EventArgs e)
         {
             Usuario admin = new Administrador("12345678", $"{Program.adminName}", $"{Program.adminSurname}", "06/06/1996", "Calle Cualquiera 1200", "Lomas de Zamora", "20-12345678-9", $"{Program.adminPass}");
@@ -143,6 +141,10 @@ namespace AdministracionTienda
             Factura factura2 = new(ETipoFactura.B, trx2);
             factura2.Guardar();
         }
+        /// <summary>
+        /// Cierra el formulario
+        /// </summary>
+        /// <param name="menu"></param>
         public static void CerrarMenu(Form menu)
         {
             menu.Close();

@@ -44,7 +44,10 @@ namespace Biblioteca
             }
         }
 
-
+        /// <summary>
+        /// Verifica si la sesion sigue activa
+        /// </summary>
+        /// <returns>true | false</returns>
         public bool SesionActiva()
         {
             int diferencia = DateTime.Now.Minute - ultimaActividad.Minute;
@@ -54,10 +57,16 @@ namespace Biblioteca
             }
             return false;
         }
+        /// <summary>
+        /// Renueva el tiempo de la sesion
+        /// </summary>
         public void RenovarSesion()
         {
             this.UltimaActividad = DateTime.Now;
         }
+        /// <summary>
+        /// Cierra la sesion
+        /// </summary>
         public void CerrarSesion()
         {
             IdSesion = null;

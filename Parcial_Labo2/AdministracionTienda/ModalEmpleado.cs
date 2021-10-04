@@ -106,6 +106,10 @@ namespace AdministracionTienda
                 DialogResult = DialogResult.OK;
             }
         }
+        /// <summary>
+        /// Verifica que ambas claves sean iguales
+        /// </summary>
+        /// <returns>true | false</returns>
         private bool VerificarClaves()
         {
             if (!String.IsNullOrEmpty(txtNuevaPass.Text) && Validacion.FormatoPassword(txtNuevaPass.Text) && txtNuevaPass.Text == txtVerificar.Text)
@@ -113,11 +117,6 @@ namespace AdministracionTienda
                 return true;
             }
             return false;
-        }
-
-        private void ModalEmpleado_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

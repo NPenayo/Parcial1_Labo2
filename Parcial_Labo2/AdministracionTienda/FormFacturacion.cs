@@ -18,7 +18,9 @@ namespace AdministracionTienda
             InitializeComponent();
             ListarTransacciones();
         }
-
+        /// <summary>
+        /// Muestra la lista de transacciones
+        /// </summary>
         private void ListarTransacciones()
         {
             listTransacciones.Items.Clear();

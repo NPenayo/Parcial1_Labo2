@@ -112,7 +112,11 @@ namespace Biblioteca
 
 
 
-
+        /// <summary>
+        /// Calcula la edad
+        /// </summary>
+        /// <param name="fecha"></param>
+        /// <returns>string</returns>
         private string CalcularEdad(string fecha)
         {
             DateTime nacimiento = DateTime.ParseExact(fecha, "dd/MM/yyyy", null);
@@ -121,7 +125,11 @@ namespace Biblioteca
             double dias = diferencia.TotalDays;
             return ((int)dias / 365).ToString();
         }
-
+        /// <summary>
+        /// Covierte a mayusculas la primer letra de cada palabra
+        /// </summary>
+        /// <param name="entrada"></param>
+        /// <returns>string</returns>
         private string FormatearString(string entrada)
         {
 

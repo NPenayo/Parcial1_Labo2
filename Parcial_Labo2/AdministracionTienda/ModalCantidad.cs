@@ -24,13 +24,11 @@ namespace AdministracionTienda
 
         }
 
-
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (Validacion.NumeroEntero(txtCantidad.Text) && int.Parse(txtCantidad.Text) <= stockProducto)
             {
-               this.DialogResult = DialogResult.OK;
+                this.DialogResult = DialogResult.OK;
             }
             else
             {

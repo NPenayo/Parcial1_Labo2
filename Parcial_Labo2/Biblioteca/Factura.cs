@@ -34,15 +34,26 @@ namespace Biblioteca
         public Transaccion Detalle { get { return this.detalle; } private set { if (value is not null) { detalle = value; } else { this.detalle = null; } } }
         public string NumeroFactura { get { return this.nroFactucra; } private set { this.nroFactucra = value; } }
         public DateTime Fecha { get { return this.fecha; } private set { this.fecha = value; } }
+       /// <summary>
+       /// Crea el numero de la factura
+       /// </summary>
+       /// <returns>string</returns>
         private string GenerarNroFactura()
         {
             string formato = $"{this.Tipo}-00000000-00";
             return (ultimoNroFactura + 1).ToString(formato);
         }
+       /// <summary>
+       /// Agregar una transaccion a una factura
+       /// </summary>
+       /// <param name="factura"></param>
         public static explicit operator Transaccion(Factura factura)
         {
             return factura.Detalle;
         }
+       /// <summary>
+       /// Guarda una factura
+       /// </summary>
         public void Guardar()
         {
 

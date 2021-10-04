@@ -46,6 +46,9 @@ namespace AdministracionTienda
             MostrarHora();
 
         }
+        /// <summary>
+        /// Muestra la hora
+        /// </summary>
         private void MostrarHora()
         {
             horas = DateTime.Now.Hour;
@@ -60,6 +63,11 @@ namespace AdministracionTienda
                 this.lblHora.Text = $"{horas}:{minutos}";
             }
         }
+        /// <summary>
+        /// Obtiene un cliente por el DNI 
+        /// </summary>
+        /// <param name="valor"></param>
+        /// <returns>Cliente</returns>
         private Cliente BuscarCliente(string valor)
         {
             foreach (Cliente cliente in clientes)
@@ -99,6 +107,9 @@ namespace AdministracionTienda
 
             }
         }
+        /// <summary>
+        /// Muestra la lista de productos
+        /// </summary>
         private void MostrarProductos()
         {
             listProductos.Items.Clear();
@@ -149,6 +160,11 @@ namespace AdministracionTienda
 
             }
         }
+        /// <summary>
+        /// Obtiene el producto por el ID
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <returns></returns>
         private Producto ObtenerProducto(string productId)
         {
             foreach (Producto producto in Program.productos)
@@ -160,13 +176,16 @@ namespace AdministracionTienda
             }
             return null;
         }
+        /// <summary>
+        /// Muestra el saldo del cliente
+        /// </summary>
         private void ImprimirSaldo()
         {
-            if(clienteTrx is not null)
+            if (clienteTrx is not null)
             {
 
-            string saldo = clienteTrx.Saldo.ToString("N2");
-            lblSaldo.Text = $"Saldo: $ {saldo}";
+                string saldo = clienteTrx.Saldo.ToString("N2");
+                lblSaldo.Text = $"Saldo: $ {saldo}";
             }
             else
             {
@@ -191,6 +210,9 @@ namespace AdministracionTienda
 
             }
         }
+        /// <summary>
+        /// Imprime el total de la compra
+        /// </summary>
         private void ImprimirTotal()
         {
             lblTotal.Text = $"${transaccion.Total.ToString("N2")}";
@@ -220,6 +242,9 @@ namespace AdministracionTienda
             LimpiarTodo();
         }
 
+        /// <summary>
+        /// Limpia todos los campos del formulario
+        /// </summary>
         private void LimpiarTodo()
         {
             txtDni.Text = "";

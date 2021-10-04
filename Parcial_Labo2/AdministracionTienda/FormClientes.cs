@@ -173,7 +173,11 @@ namespace AdministracionTienda
                 break;
             }
         }
-
+        /// <summary>
+        /// Obtiene un cliente por DNI
+        /// </summary>
+        /// <param name="dni"></param>
+        /// <returns>Cliente</returns>
         private Cliente ObtenerCliente(string dni)
         {
             foreach (Usuario usuario in Program.usuarios)

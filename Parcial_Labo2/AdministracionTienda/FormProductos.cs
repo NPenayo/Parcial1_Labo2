@@ -40,6 +40,10 @@ namespace AdministracionTienda
 
 
         }
+        /// <summary>
+        /// Muestra la lista de productos de un tipo
+        /// </summary>
+        /// <param name="tipo"></param>
         private void MostrarProductos(string tipo)
         {
             listProductos.Items.Clear();
@@ -75,6 +79,11 @@ namespace AdministracionTienda
                 listProductos.Items.Clear();
             }
         }
+        /// <summary>
+        /// Obtiene un producto por ID
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <returns>Producto</returns>
         private Producto ObtenerProducto(string productId)
         {
             foreach (Producto producto in Program.productos)
