@@ -131,6 +131,7 @@ namespace AdministracionTienda
             this.btnCrearCliente.TabIndex = 7;
             this.btnCrearCliente.Text = "NUEVO CLIENTE";
             this.btnCrearCliente.UseVisualStyleBackColor = false;
+            this.btnCrearCliente.Click += new System.EventHandler(this.btnCrearCliente_Click);
             // 
             // listClientes
             // 

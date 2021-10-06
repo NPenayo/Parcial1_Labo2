@@ -237,6 +237,8 @@ namespace AdministracionTienda
         private void MenuBase_Load(object sender, EventArgs e)
         {
             this.tiempoSesion.Enabled = true;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
         }
         /// <summary>
         /// Abre el formulario correspondiente a la opcion del menu

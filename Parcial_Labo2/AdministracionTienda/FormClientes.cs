@@ -195,5 +195,15 @@ namespace AdministracionTienda
             }
             return null;
         }
+
+        private void btnCrearCliente_Click(object sender, EventArgs e)
+        {
+            ModalCliente modal = new ModalCliente();
+            if (modal.DialogResult == DialogResult.OK)
+            {
+                MessageBox.Show("Se creo el usuario correctamente");
+                ListarClientes();
+            }
+        }
     }
 }
